@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willor AI Studio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071a12;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 25px;
+      text-align: center;
+      border-bottom: 1px solid #c9a96e;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #d8bd82;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #b8c7bd;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .gold {
+      color: #d8bd82;
+    }
+
+    .card {
+      background: #10291e;
+      border: 1px solid #31513f;
+      border-radius: 18px;
+      padding: 30px;
+      margin-top: 25px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #557363;
+      background: #071a12;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 18px;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #d8bd82;
+      color: #071a12;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      color: #b8c7bd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #71877a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">WILLOR AI</div>
+    <div class="tagline">AI-powered content creation studio</div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Create <span class="gold">Amazing Videos</span></h1>
+      <p>
+        Turn an idea into a video concept with the power of AI.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What do you want to create?</h2>
+
+      <textarea
+        id="prompt"
+        placeholder="Example: Create a funny TikTok about why cats think they own the house..."
+      ></textarea>
+
+      <button onclick="createVideoIdea()">
+        ✨ Create With AI
+      </button>
+
+      <div id="message"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Willor AI Studio
+  </footer>
+
+  <script>
+    function createVideoIdea() {
+      const prompt = document.getElementById("prompt").value;
+      const message = document.getElementById("message");
+
+      if (!prompt.trim()) {
+        message.textContent = "Tell me what you want to create first 😊";
+        return;
+      }
+
+      message.textContent =
+        "✨ Your AI video idea is being prepared... This is where we'll connect the AI next!";
+    }
+  </script>
+
+</body>
+</html>
