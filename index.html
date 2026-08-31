@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Video Studio</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+<aside><div class="logo">✦ <span>AI Video Studio</span></div><div class="free-badge">FREE DEMO MODE</div>
+<nav><button class="active" onclick="show('create')">Create</button><button onclick="show('projects')">Projects</button><button onclick="show('templates')">Templates</button><button onclick="show('settings')">Settings</button></nav>
+<div class="side-note">Your little video factory is warming up. 🎬</div></aside>
+<main>
+<section id="create" class="page active"><div class="hero"><p class="eyebrow">AI VIDEO FACTORY</p><h1>Turn an idea into a video.</h1><p>Write the topic. The studio builds the plan — no paid AI API required.</p></div>
+<div class="card form"><label>What should the video be about?</label><textarea id="topic" placeholder="e.g. 7 surprising facts about African giant snails"></textarea>
+<div class="grid"><div><label>Style</label><select id="style"><option>viral facts</option><option>storytime</option><option>educational</option><option>funny</option><option>top 10</option><option>motivational</option></select></div>
+<div><label>Platform</label><select id="platform"><option value="tiktok">TikTok / Reels / Short</option><option value="youtube">YouTube</option></select></div>
+<div><label>Length</label><select id="duration"><option value="30">30 sec</option><option value="45" selected>45 sec</option><option value="60">60 sec</option><option value="180">3 min</option><option value="480">8 min</option></select></div></div>
+<button class="primary" onclick="generate()">✨ Generate video plan</button><div id="status"></div></div>
+<div id="result"></div></section>
+<section id="projects" class="page"><div class="hero"><p class="eyebrow">LIBRARY</p><h1>Your projects</h1></div><div id="projectList"></div></section>
+<section id="templates" class="page"><div class="hero"><p class="eyebrow">TEMPLATES</p><h1>Pick a content machine.</h1></div><div class="template-grid"><div class="template">🔥 Viral Facts<small>Fast hook + rapid-fire facts</small></div><div class="template">😂 Storytime<small>Setup → twist → payoff</small></div><div class="template">📚 Educational<small>Simple explanations with visual cues</small></div><div class="template">🐾 Pet Content<small>Cute, useful, highly shareable</small></div></div></section>
+<section id="settings" class="page"><div class="hero"><p class="eyebrow">SETTINGS</p><h1>Studio settings</h1></div><div class="card"><h3>Provider connections</h3><p>V1 runs in demo mode. Later, connect text, voice, image and video providers here. The provider layer is already separated in the backend.</p><div class="pill">● Demo provider active</div></div></section>
+</main></div><script src="/app.js"></script>
+</body></html>
