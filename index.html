@@ -1,24 +1,55 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Video Studio</title><link rel="stylesheet" href="/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Willor AI Studio</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0e241d;color:#f5f1e8}
+.wrap{max-width:1100px;margin:auto;padding:24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0 45px}
+.logo{font-weight:800;letter-spacing:2px;color:#e5cc98;font-size:22px}
+nav a{color:#eee8dc;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 80px}
+h1{font-size:clamp(44px,8vw,78px);line-height:.98;margin:0 0 22px}
+h1 span{color:#e5cc98}.lead{font-size:18px;line-height:1.7;color:#d1d9d3;max-width:620px}
+.btn{display:inline-block;margin-top:25px;padding:15px 23px;border-radius:9px;background:#e5cc98;color:#10251e;text-decoration:none;font-weight:700}
+.panel{background:#17382d;border:1px solid #536d5e;border-radius:20px;padding:28px;box-shadow:0 20px 50px #0004}
+.screen{border-radius:14px;background:#0c1d18;padding:22px;min-height:300px}
+.dots{display:flex;gap:6px;margin-bottom:25px}.dot{width:8px;height:8px;border-radius:50%;background:#75867c}
+.fake-title{font-size:25px;margin-bottom:10px}.fake-line{height:9px;background:#40584d;border-radius:20px;margin:12px 0}.short{width:65%}
+section{padding:45px 0}.title{text-align:center;font-size:34px;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#17382d;border:1px solid #536d5e;border-radius:16px;padding:25px}
+.card h3{color:#e5cc98;margin-top:0}.card p{color:#cbd5ce;line-height:1.6}
+.cta{text-align:center;padding:50px 25px;background:#17382d;border:1px solid #536d5e;border-radius:20px}
+footer{text-align:center;color:#92a49b;font-size:13px;padding:40px 0}
+@media(max-width:750px){.hero{grid-template-columns:1fr;padding-top:10px}.hero .panel{order:-1}.grid{grid-template-columns:1fr}nav a{display:none}}
+</style>
 </head>
 <body>
-<div class="app">
-<aside><div class="logo">✦ <span>AI Video Studio</span></div><div class="free-badge">FREE DEMO MODE</div>
-<nav><button class="active" onclick="show('create')">Create</button><button onclick="show('projects')">Projects</button><button onclick="show('templates')">Templates</button><button onclick="show('settings')">Settings</button></nav>
-<div class="side-note">Your little video factory is warming up. 🎬</div></aside>
+<div class="wrap">
+<nav><div class="logo">WILLOR AI</div><div><a href="#features">Features</a><a href="#start">Get Started</a></div></nav>
 <main>
-<section id="create" class="page active"><div class="hero"><p class="eyebrow">AI VIDEO FACTORY</p><h1>Turn an idea into a video.</h1><p>Write the topic. The studio builds the plan — no paid AI API required.</p></div>
-<div class="card form"><label>What should the video be about?</label><textarea id="topic" placeholder="e.g. 7 surprising facts about African giant snails"></textarea>
-<div class="grid"><div><label>Style</label><select id="style"><option>viral facts</option><option>storytime</option><option>educational</option><option>funny</option><option>top 10</option><option>motivational</option></select></div>
-<div><label>Platform</label><select id="platform"><option value="tiktok">TikTok / Reels / Short</option><option value="youtube">YouTube</option></select></div>
-<div><label>Length</label><select id="duration"><option value="30">30 sec</option><option value="45" selected>45 sec</option><option value="60">60 sec</option><option value="180">3 min</option><option value="480">8 min</option></select></div></div>
-<button class="primary" onclick="generate()">✨ Generate video plan</button><div id="status"></div></div>
-<div id="result"></div></section>
-<section id="projects" class="page"><div class="hero"><p class="eyebrow">LIBRARY</p><h1>Your projects</h1></div><div id="projectList"></div></section>
-<section id="templates" class="page"><div class="hero"><p class="eyebrow">TEMPLATES</p><h1>Pick a content machine.</h1></div><div class="template-grid"><div class="template">🔥 Viral Facts<small>Fast hook + rapid-fire facts</small></div><div class="template">😂 Storytime<small>Setup → twist → payoff</small></div><div class="template">📚 Educational<small>Simple explanations with visual cues</small></div><div class="template">🐾 Pet Content<small>Cute, useful, highly shareable</small></div></div></section>
-<section id="settings" class="page"><div class="hero"><p class="eyebrow">SETTINGS</p><h1>Studio settings</h1></div><div class="card"><h3>Provider connections</h3><p>V1 runs in demo mode. Later, connect text, voice, image and video providers here. The provider layer is already separated in the backend.</p><div class="pill">● Demo provider active</div></div></section>
-</main></div><script src="/app.js"></script>
-</body></html>
+<section class="hero">
+<div>
+<h1>Your ideas.<br><span>Powered by AI.</span></h1>
+<p class="lead">Willor AI Studio is a creative workspace for turning simple ideas into content, marketing concepts and digital creations — all from one place.</p>
+<a class="btn" href="#start">Explore Willor AI</a>
+</div>
+<div class="panel"><div class="screen"><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="fake-title">AI Video Studio</div><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-line"></div><div class="fake-line short"></div></div></div>
+</section>
+<section id="features">
+<h2 class="title">One studio. Endless possibilities.</h2>
+<div class="grid">
+<div class="card"><h3>✦ Create</h3><p>Turn your ideas into polished creative concepts with AI.</p></div>
+<div class="card"><h3>✦ Write</h3><p>Create captions, advertisements, scripts and business copy.</p></div>
+<div class="card"><h3>✦ Grow</h3><p>Build a stronger online presence with practical AI-powered tools.</p></div>
+</div>
+</section>
+<section id="start"><div class="cta"><h2 class="title">Welcome to Willor AI Studio.</h2><p class="lead" style="margin:auto">This is the beginning. More AI-powered tools are coming.</p><a class="btn" href="mailto:hello@willor.ai">Join the journey</a></div></section>
+</main>
+<footer>© 2026 Willor AI Studio · Built with imagination + AI</footer>
+</div>
+</body>
+</html>
