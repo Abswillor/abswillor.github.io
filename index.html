@@ -324,6 +324,34 @@ function createIdea() {
 }
 
 </script>
+<script>
+function createIdea() {
+  const idea = document.getElementById("idea").value.trim();
+  const result = document.getElementById("result");
 
+  if (!idea) {
+    result.innerHTML = "💡 Tell Willor what you want to create first!";
+    return;
+  }
+
+  result.innerHTML = `
+    <div style="text-align:left; line-height:1.6;">
+      <h3>🎬 Your Willor AI Creation</h3>
+      <p><strong>💡 Idea</strong><br>${idea}</p>
+      <p><strong>🎞️ Scene 1 — Hook</strong><br>
+      Start with an attention-grabbing shot of the main subject.</p>
+      <p><strong>🎞️ Scene 2 — Action</strong><br>
+      Show something interesting happening based on the idea.</p>
+      <p><strong>🎞️ Scene 3 — The Moment</strong><br>
+      Build toward the funniest, most surprising, or exciting moment.</p>
+      <p><strong>🎙️ Voiceover</strong><br>
+      “You won't believe what happens next…”</p>
+      <p><strong>📱 Caption</strong><br>${idea} 👀 Wait for it!</p>
+      <p><strong>#️⃣ Hashtags</strong><br>
+      #TikTok #Reels #Shorts #WillorAI</p>
+    </div>
+  `;
+}
+</script>
 </body>
 </html> 
